@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Conversation Reader for Thunderbird",
+  "description": "View selected Thunderbird emails in a clean conversation view. Read related messages as chronological cards, collapse quoted text, identify your own replies, and open a reply or original message in one click.",
+  "version": "1.0.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{9c8c2a4f-0f4e-4a4d-9c1a-bb6d9e6b4c21}",
+      "strict_min_version": "137.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_title": "Open in Conversation Reader",
+    "default_icon": {
+      "16": "icons/conversation-reader.svg",
+      "32": "icons/conversation-reader.svg",
+      "64": "icons/conversation-reader.svg"
+    }
+  },
+  "icons": {
+    "16": "icons/conversation-reader.svg",
+    "32": "icons/conversation-reader.svg",
+    "64": "icons/conversation-reader.svg"
+  },
+  "permissions": [
+    "messagesRead",
+    "menus",
+    "accountsRead",
+    "compose",
+    "theme",
+    "storage",
+    "downloads"
+  ]
+}

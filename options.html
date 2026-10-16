@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversation Reader - Options</title>
+  </head>
+  <body>
+    <main class="options-page">
+      <header class="options-header">
+        <h1>Conversation Reader - Options</h1>
+      </header>
+
+      <section class="options-panel" aria-labelledby="accent-label">
+        <div class="setting-row">
+          <div>
+            <h2 id="accent-label">Accent color</h2>
+            <p class="setting-description">This color applies to your avatar and Reply button. Incoming messages keep the default amber color.</p>
+          </div>
+        </div>
+
+        <div
+          id="accent-options"
+          class="accent-options"
+          role="radiogroup"
+          aria-labelledby="accent-label"
+        ></div>
+
+        <div class="accent-preview" aria-label="Accent color preview">
+          <div class="preview-avatar" aria-hidden="true">HK</div>
+          <button class="preview-reply" type="button">Reply</button>
+        </div>
+
+        <div class="options-actions">
+          <button id="reset-color" class="secondary-button" type="button">Reset to default</button>
+          <p id="save-status" class="save-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/options.ts"></script>
+  </body>
+</html>
