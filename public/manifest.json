@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Conversation Reader for Thunderbird",
   "description": "View selected Thunderbird emails in a clean conversation view. Read related messages as chronological cards, collapse quoted text, identify your own replies, and open a reply or original message in one click.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "browser_specific_settings": {
     "gecko": {
       "id": "{9c8c2a4f-0f4e-4a4d-9c1a-bb6d9e6b4c21}",
@@ -38,8 +38,6 @@
     "messagesRead",
     "menus",
     "accountsRead",
-    "compose",
-    "theme",
     "storage",
     "downloads"
   ]

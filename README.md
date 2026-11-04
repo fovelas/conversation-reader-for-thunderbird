@@ -19,16 +19,37 @@ The screenshot uses dummy messages for demonstration.
 
 Thunderbird 137 or later.
 
-## Development
+## Build environment
 
-This project uses TypeScript and Vite. Install the dependencies and build the extension:
+The reproducible release build uses:
+
+- OS: Windows 10 with WSL2 (Debian)
+- Node.js: 26.13.0 ([official Node.js site](https://nodejs.org/))
+- npm: 12.2.1 ([official npm documentation](https://docs.npmjs.com/))
+
+## Build
+
+This project uses TypeScript and Vite. From the repository root, install the exact dependency versions from the committed lockfile and build the extension:
 
 ```bash
-bun install
-bun run build
+npm ci
+npm run build
 ```
 
+`npm ci` uses `package-lock.json` without updating it. Use `npm install` only when intentionally changing dependencies or regenerating the lockfile.
+
 The generated extension is placed in `dist/`. Load `dist/manifest.json` as a temporary add-on in Thunderbird.
+
+## Release packaging
+
+The XPI must contain the files inside `dist/`, not the `dist/` directory itself. From the repository root:
+
+```bash
+(cd dist && zip -r -FS ../conversation-reader-1.0.1.xpi . -x '*.xpi' '*.zip' 'mockup.html')
+unzip -t conversation-reader-1.0.1.xpi
+```
+
+Keep `dist/` and `node_modules/` out of the source archive. The source archive must include the committed `package-lock.json` and the build instructions in this README.
 
 ## License
 

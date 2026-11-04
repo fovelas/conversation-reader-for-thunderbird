@@ -8,7 +8,6 @@ export default defineConfig({
         main: 'index.html',
         background: 'background.html',
         options: 'options.html',
-        mockup: 'mockup.html',
       },
     },
   },
